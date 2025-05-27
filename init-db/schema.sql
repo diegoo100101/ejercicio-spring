@@ -4,6 +4,7 @@ CREATE TABLE Material (
     ds_codigo VARCHAR(20) UNIQUE,
     ds_nombre VARCHAR(200) NOT NULL,
     id_dependencia INT
+    CONSTRAINT fk_material_dependencia FOREIGN KEY (id_dependencia) REFERENCES Material(id_material)
 );
 
 -- Crear la tabla Formato
